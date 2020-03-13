@@ -14,19 +14,6 @@
     background-color 2s, transform 0.5s;
 }
 
-// make header icons semi-translucent
-.d-header-icons {
-  .d-icon {
-    color: rgba(
-      dark-light-choose(
-        scale-color($header_primary, $lightness: 50%),
-        $header_primary
-      ),
-      0.7
-    );
-  }
-}
-
 //add shadow behind the list of topics on right in Category and Latest View
 //add shadow behind list of categories on left in Category and Latest View
 //add shadow behind topics in Latest view
@@ -41,9 +28,13 @@
 .nav-pills > li.active > a,
 .nav-pills > li > a.active {
   color: $primary;
-  font-weight: 500;
+  font-weight: 300;
   background-color: $secondary;
-  border-bottom: 3px solid $tertiary;
+  border-bottom: 3px solid $quaternary;
+}
+
+.nav-pills > li > a {
+  font-weight: 300;
 }
 
 //remove highlighting navigation background on hover
@@ -100,71 +91,20 @@
   box-shadow: none;
 }
 
-//New Topic Fab
-#create-topic.btn-default {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include buttonShadow;
-  @include buttonTransition;
-  padding: 0;
-  margin: 0;
-  width: 63px;
-  height: 63px;
-  border-radius: 40px;
-  position: fixed;
-  bottom: 30px;
-  right: 50px;
-  z-index: z("composer", "content") - 1;
-  background-color: $tertiary;
-  color: $secondary;
-  white-space: nowrap;
-  overflow: hidden;
-  .d-icon {
-    margin: 0;
-    color: $secondary;
-  }
-  .d-button-label {
-    display: inline-block;
-    transition: all 0.3s;
-    margin: 0 0.25em;
-  }
-
-  &:not(:hover):not(:active):not(:focus) {
-    .d-button-label {
-      opacity: 0;
-      width: 0;
-      margin: 0;
-    }
-    .d-icon {
-      margin: 0 0.25em;
-    }
-  }
-}
-
-#create-topic.btn-default .fa-plus {
-  color: $secondary;
-}
-
-#create-topic.btn-default:hover {
-  width: 190px;
-}
-
 //Reply Fab
 .timeline-footer-controls {
   position: relative;
 }
 
 .widget-button.btn.create {
-  border-radius: 50%;
   position: absolute;
   top: 50px;
-  left: -18px;
-  background-color: $tertiary;
+  left: -2px;
+  background-color: $quaternary;
   @include buttonShadow;
   overflow: hidden;
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   @include buttonTransition;
   .d-icon {
     color: $secondary;
@@ -264,3 +204,17 @@
     }
   }
 }
+
+// custom timeline colors 
+.timeline-container {
+  .topic-timeline {
+    .timeline-handle {
+      background-color: $quaternary-low;
+    }
+    .timeline-scrollarea {
+      border-color: $quaternary-low;
+    }
+  }
+}
+
+// custom reply button

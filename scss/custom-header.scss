@@ -1,0 +1,19 @@
+.cartalk-custom-menu {
+  width: 50%;
+  height: 35px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  font-family: "lato";
+  font-size: 14px;
+  font-weight: 400;
+
+  a.cartalk-custom-menu-link {
+    color: $primary;
+  }
+  
+  a.cartalk-custom-menu-link:hover {
+    color: $quaternary;
+  }
+}

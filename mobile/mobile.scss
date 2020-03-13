@@ -2,6 +2,10 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 0 0 0 rgba(0, 0, 0, 0.12);
 }
 
+.alert {
+  display: none;
+}
+
 //create conversation cards
 .topic-body {
   @include boxShadow;
@@ -9,6 +13,10 @@
   margin-top: 10px;
   padding: 20px;
   border-radius: 2px;
+}
+
+#main-outlet {
+  padding-top: 75px;
 }
 
 //more space for avatars
@@ -58,5 +66,31 @@ aside.quote {
       right: initial;
       left: 4px;
     }
+  }
+}
+
+// custom header
+.cartalk-custom-menu {
+  width: 50%;
+  height: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  a.cartalk-custom-menu-link {
+    color: $primary-medium;
+  }
+}
+
+// custom timeline
+#topic-progress {
+  border: 1px solid rgba($quaternary,.5);
+  color: $quaternary;
+  .nums h4 {
+    color: $quaternary;
+  }
+  .bg {
+    border-right: 1px solid rgba($quaternary,.5);
+    background-color: rgba($quaternary,.25);
   }
 }

@@ -1,1 +1,25 @@
+<script type="text/discourse-plugin" version="0.8.25">
+  api.reopenWidget("home-logo", {
+    logoUrl() {
+      return (
+        settings.theme_uploads["ct-logo"] || ""
+      );
+      
+    },
+
+    mobileLogoUrl() {
+      return (
+        settings.Alternative_mobile_logo_url || ""
+      );
+    },
+
+    smallLogoUrl() {
+      return (
+        settings.theme_uploads["ct-logo"] || ""
+      );
+    }
+  });
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet"> 
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">

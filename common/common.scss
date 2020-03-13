@@ -1,6 +1,9 @@
-//use Roboto font
+@import "custom-header";
+@import "custom-footer";
+
+//use Lato font
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", "Roboto", sans-serif;
   font-weight: 400;
 }
 
@@ -8,7 +11,38 @@ body input,
 body button,
 body select,
 body textarea {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "Roboto", Helvetica, Arial, sans-serif;
+}
+
+// topic text styling
+.topic-body {
+  .regular.contents .cooked p {
+    font-weight: 300;
+  }
+}
+
+.category-description {
+  font-family: "Lato";
+  font-weight: 300 !important;
+}
+
+.topic-inset {
+  font-family: "Lato";
+  font-weight: 300 !important;
+}
+
+.topic-excerpt {
+  font-family: "Lato";
+  font-weight: 300 !important;
+}
+
+// remove weird border after topic post
+.time-gap {
+  border-top: none;
+}
+
+thead tr th, .table-heading {
+  font-weight: 300;
 }
 
 @mixin boxShadow {
@@ -25,6 +59,30 @@ body textarea {
   @include boxShadow;
 }
 
+.sign-up-button {
+  display: none;
+}
+
+.btn.login-button {
+  background-color: #940017;
+  color: $secondary;
+  .d-icon {
+    color: $secondary;
+  }
+  &:hover {
+    background-color: #7f0014 !important;
+    color: $secondary;
+  .d-icon {
+    color: $secondary;
+  }
+  }
+}
+
+.btn-primary {
+  background-color: $quaternary;
+  color: $secondary;
+}
+
 //remove shadow from a few buttons
 .d-editor-button-bar .btn,
 .bulk-select-all,
@@ -37,4 +95,98 @@ body textarea {
 #login-link {
   border-radius: 0;
   box-shadow: none;
+}
+
+
+// Custom Header Styling
+.d-header {
+  box-shadow: none;
+  border-bottom: 1px solid $primary-low;
+  background-color: $quaternary;
+  padding: 5px 0;
+  img#site-logo.logo-big {
+    width: auto;
+    height: 50px;
+  }
+}
+
+// header switch custom styling
+.extra-info-wrapper .extra-info .title-wrapper {
+  .header-title a {
+    color: $secondary;
+  }
+  .categories-wrapper a span {
+    color: rgba($secondary,.75);
+  }
+  .topic-header-extra .discourse-tags a.discourse-tag {
+    color: rgba($secondary,.6) !important;
+  }
+}
+
+// make header icons semi-translucent
+.d-header-icons {
+  .d-icon {
+    color: rgba($secondary, .9);
+  }
+}
+
+input[type="text"]:focus, input[type="password"]:focus,
+input[type="datetime"]:focus, input[type="datetime-local"]:focus,
+input[type="date"]:focus, input[type="month"]:focus,
+input[type="time"]:focus, input[type="week"]:focus,
+input[type="number"]:focus, input[type="email"]:focus,
+input[type="url"]:focus, input[type="search"]:focus,
+input[type="tel"]:focus, input[type="color"]:focus {
+  border-color: $quaternary;
+  box-shadow: 0 0 6px 0 $quaternary;
+  outline: 0;
+}
+
+
+.panel-body, .menu-panel.slide-in {
+  a {color: $quaternary}
+  .d-icon {
+    color: $quaternary;
+  }
+}
+
+// color dropdown links red
+.menu-panel.drop-down {
+  a {color: $quaternary}
+  .d-icon {
+    color: $quaternary;
+  }
+}
+
+// topic composer top border color
+.open .grippie {
+  background-color: $quaternary;
+}
+
+.link-top-line, a.title {
+  font-weight: 400;
+}
+
+.visited {
+  .link-top-line, a.title {
+    font-weight: 300;
+  }
+}
+
+//underline navigation links
+.nav-pills > li.active > a,
+.nav-pills > li > a.active {
+  color: $primary;
+  font-weight: 300;
+  background-color: $secondary;
+  border-bottom: 3px solid $quaternary;
+}
+
+.nav-pills > li > a {
+  font-weight: 300;
+}
+
+//remove highlighting navigation background on hover
+.nav-pills > li > a:hover {
+  background-color: $secondary;
 }

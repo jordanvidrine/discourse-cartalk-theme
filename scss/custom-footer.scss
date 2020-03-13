@@ -1,0 +1,42 @@
+.custom-footer {
+  background-color: $quaternary;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+  &-container {
+    width: 60%;
+    color: $secondary;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .first {
+      width: 65%;
+      font-size: 16px;
+      line-height: 25px;
+      .btn {
+        background-color: $quaternary;
+        border: 1px solid $secondary;
+        box-shadow: none;
+        padding: 10px;
+      }
+      a {
+        color: $secondary;
+      }
+    }
+    .second {
+      width: 25%;
+      list-style: none;
+      li p {
+        font-weight: 600;
+        font-size: 17px;
+        margin-bottom: 2px;
+      }
+      li a {
+        color: $secondary;
+        font-size: 15px;
+      }
+    }
+  }
+}
