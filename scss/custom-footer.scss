@@ -1,4 +1,5 @@
 .custom-footer {
+  margin-top: 25px;
   background-color: $quaternary;
   display: flex;
   flex-direction: row;
@@ -13,7 +14,7 @@
     justify-content: space-between;
     .first {
       width: 65%;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 25px;
       .btn {
         background-color: $quaternary;
@@ -30,12 +31,12 @@
       list-style: none;
       li p {
         font-weight: 600;
-        font-size: 17px;
+        font-size: 20px;
         margin-bottom: 2px;
       }
       li a {
         color: $secondary;
-        font-size: 15px;
+        font-size: 18px;
       }
     }
   }
